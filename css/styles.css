@@ -1,0 +1,24 @@
+:root {
+    --color-primary: #d6a63b;
+    --color-secondary: #403f3b;
+    --color-primary-headings: #fff;
+    --color-primary-body: #fff;
+    --color-secondary-headings: #d6a63b;
+    --color-secondary-body: #d6a63b;
+    --color-border: #d6a63b;
+}
+
+/* Typography */
+::selection {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+html {
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    
+}
