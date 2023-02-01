@@ -20,5 +20,60 @@ html {
 }
 
 body {
-    
+    color: var(--color-primary-body);
 }
+
+h1, h2, h3 {
+    color: var(--color-secondary-headings);
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        color: var(--color-primary-body);
+    }
+
+    h1, h2, h3 {
+        color: var(--color-primary-headings);
+    }
+
+    h1 {
+
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+
+    }
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Badges */
+
+/* Lists */
+
+/* Icons */
+
+/* Buttons */
