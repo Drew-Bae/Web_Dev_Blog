@@ -53,6 +53,7 @@ p {
 @media screen and (min-width: 1024px) {
     body {
         color: var(--color-primary-body);
+        font-size: 1.8rem;
     }
 
     h1, h2, h3 {
@@ -60,16 +61,35 @@ p {
     }
 
     h1 {
-
+        font-size: 3.5rem;
     }
 
     h2 {
-
+        font-size: 2rem;
     }
 
     h3 {
 
     }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /* Links */
@@ -82,6 +102,7 @@ a {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
+    margin-top: 3rem;
 }
 
 .link-arrow::after {
@@ -153,14 +174,16 @@ a {
 /* Inputs */
 
 /* Cards */
-.practice {
+.cards-container {
     position: absolute;
     right: 0;
     top: 0;
     background-color: #6b6b6b;
-    background: linear-gradient(145deg,#6b6b6b 30%, #000000 90%);
+    background: radial-gradient(circle farthest-corner at top left, #434343 0%, #121211 80%);
     width: 25vw;
     height: 100vh;
+    overflow-x: auto;
+    overflow-y: scroll;
 }
 
 .cards {
@@ -174,6 +197,15 @@ a {
     outline: 0;
     padding: 2rem 3rem;
     line-height: 1.8;
+}
+
+.cards-body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* number of lines to show */
+            line-clamp: 8; 
+    -webkit-box-orient: vertical;
 }
 
 .cards--secondary {
@@ -197,6 +229,7 @@ a {
 
 .btn-container {
     display: flex;
+    overflow: scroll;
 }
 
 .btn-container .btn {
@@ -204,4 +237,59 @@ a {
     margin: 1rem 1rem;
     margin-left: 0;
     padding: 1rem;
+}
+
+.btn-container .btn--primary {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Main-Content */
+.main-container {
+    background-image: url(/images/gold_bird.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(75vw);
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.main-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5%;
+    width: 80%;
+    line-height: 0.5;
+}
+
+.main-content h2 {
+    color: var(--color-primary);
+}
+
+.main-content .links-container a {
+    color: var(--color-primary);
+}
+
+.main-body {
+    padding: 5px;
+    line-height: 1.5;
+    word-spacing: 2px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.links-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.picture-container img {
+    max-width: 100%;
+    margin-top: 5%;
 }
