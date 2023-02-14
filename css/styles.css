@@ -125,6 +125,12 @@ a {
     margin-left: 10px;
 }
 
+.subject:hover {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 1024px) {
     .link-arrow {
         font-size: 1.5rem;
@@ -322,38 +328,92 @@ a {
     margin-top: 5%;
 }
 
+@media screen and (min-width: 768px) {
+    
+}
+
 /* Navigation */
-header {
-    position: fixed;
+.mobile-container {
+    background-color: #555;
+    color: white;
+    position: absolute;
+    right: 0;
     top: 0;
-    height: 70px;
+    z-index: 3;
+  }
+
+  .topnav {
+    background-color: #333;
+    position: relative;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  #myLinks {
     width: 100vw;
-    border-bottom: 0.5px solid var(--color-border);
-    z-index: 2;
-}
+  }
 
-.nav {
-    background-color: transparent;
-}
+  .topnav a.icon {
+    background: transparent;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-.nav-list {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 0;
-    list-style: none;
-    padding-left: 0;
-}
+  #myLinks a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
-.nav-item {
-    padding-top: 22px;
-    padding-left: 90px;
-}
+@media screen and (min-width: 768px) {
+    .mobile-container {
+        background-color: transparent;
+        position: fixed;
+        right: unset;
+        height: 70px;
+        width: 100vw;
+        border-bottom: 0.5px solid var(--color-border);
+        z-index: 2;
+    }
 
-.nav-item > a {
-    color: var(--color-primary);
-}
+    .topnav {
+        background-color: transparent;
+    }
 
-.nav-item > a:hover {
-    color: #fff;
+    .topnav #myLinks {
+        display: flex;
+    }
+
+    .topnav a {
+        color: var(--color-primary);
+        padding: 0;
+        padding-top: 22px;
+        padding-left: 90px;
+        font-size: 17px;
+        display: flex;
+      }
+
+    #myLinks {
+        width: unset;
+    }
+    
+    .topnav a.icon {
+        display: none;
+    }
+    
+    #myLinks a:hover {
+        background-color: unset;
+        color: #fff;
+    }
 }

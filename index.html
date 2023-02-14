@@ -7,31 +7,30 @@
     <title>Web Development Blog</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <header class="nav">
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="">Blog Posts</a>
-          </li>
-          <li class="nav-item">
-            <a href="">Tutorials & Guides</a>
-          </li>
-          <li class="nav-item">
-            <a href="">Code Snippets</a>
-          </li>
-          <li class="nav-item">
-            <a href="">Forum</a>
-          </li>
-        </ul>
+    <header class="mobile-container">
+      <nav class="topnav">
+        <div id="myLinks">
+          <a href="#">Blog Posts</a>
+          <a href="#">Tutorial and Guides</a>
+          <a href="#">Code Snippets</a>
+          <a href="#">Forum</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
     </header>
     <section class="main-container">
       <div class="background"></div>
       <div class="main-content">
         <h1>AI Web Design</h1>
-        <h2>Artifical Intelligence</h2>
+        <h2 class="subject">Artifical Intelligence</h2>
         <div class="main-body">
           Welcome to my first blog post! My name is Drew Bae and I am an
           aspiring web developer. My goal is to keep you updated with the latest
@@ -121,5 +120,6 @@
         </p>
       </div>
     </section>
+    <script src="js/main.js"></script>
   </body>
 </html>
