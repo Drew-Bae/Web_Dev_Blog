@@ -89,12 +89,21 @@
             <button class="btn btn--primary">my tutorial</button>
           </span>
         </div>
-        <div class="picture-container">
+        <picture class="picture-container">
+          <source
+            srcset="/mock_ups/mobile_ver.png"
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset="/mock_ups/desktop_ver.png"
+            media="(max-width: 1024px)"
+          />
+          <source srcset="/mock_ups/desktop_ver.png" />
           <img
             src="/mock_ups/desktop_ver.png"
             alt="a design for this website"
           />
-        </div>
+        </picture>
       </div>
     </section>
     <!-- CARDS -->
