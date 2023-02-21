@@ -6,7 +6,3 @@ function myFunction() {
       x.style.display = "block";
     }
   }
-
-document.getElementById("toTutorial").onclick = function () {
-    location.href = "pages/tutorial.html";
-}

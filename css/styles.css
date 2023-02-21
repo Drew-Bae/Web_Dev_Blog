@@ -45,19 +45,7 @@ h1, h2, h3 {
 }
 
 h1 {
-
-}
-
-h2 {
-
-}
-
-h3 {
-
-}
-
-p {
-
+    font-size: 3.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -76,10 +64,6 @@ p {
 
     h2 {
         font-size: 2rem;
-    }
-
-    h3 {
-
     }
 }
 
@@ -123,6 +107,12 @@ a {
 
 .link-arrow:hover::after {
     margin-left: 10px;
+}
+
+.subject {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
 }
 
 .subject:hover {
@@ -392,6 +382,7 @@ a {
 .main-body {
     font-size: 1.1rem;
     padding: 5px;
+    margin-top: 0.67em;
     line-height: 1.5;
     word-spacing: 2px;
     border-radius: 5px;
@@ -430,9 +421,10 @@ a {
     }
     
     .background {
-        background-image: url(/images/upscale_mountain_butterfly.png);
+        background-image: url(/images/black_background_with_a_mountain_range.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: 50% 30%;
     }
     
     .main-content {
