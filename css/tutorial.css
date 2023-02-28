@@ -168,15 +168,19 @@ a {
 /* Steps */
 .steps-container {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     bottom: 0;
 }
 
 .steps {
-    width: 100%;
+    width: 100vw;
     padding: 25px 30px;
     border-radius: 15px;
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    scroll-snap-align: start;
 }
 
 .steps h1 {
@@ -204,8 +208,51 @@ a {
     border-radius: 50%;
 }
 
+.steps-current {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
 .steps-next {
-    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        top: 70px;
+        right: 0;
+        width: 35vw;
+        padding: 20px;
+        padding-left: 0;
+        overflow: scroll;
+        overflow-x: unset;
+    }
+
+    .steps {
+        height: fit-content;
+        width: unset;
+        padding: 10px;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+
+    .steps p {
+        line-height: 1.4;
+    }
+
+    .steps-current .badge {
+        display: none;
+        top: 10px;
+        right: 10px;
+    }
+
+    .steps-next h1 {
+        color: #fff;
+    }
+
+    .steps-next p {
+        color: #555;
+    }
 }
 
 /* Navigation */
